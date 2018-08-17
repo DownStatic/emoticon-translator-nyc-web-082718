@@ -15,8 +15,13 @@ def load_library(filepath)
   return library
 end
 
-def get_japanese_emoticon
-  # code goes here
+def get_japanese_emoticon(filepath,emoticon)
+  library = load_library(filepath)
+  if library["get_meaning"].keys.include?(emoticon)
+    return library["get_meaning"][emoticon]
+  else
+    return "Sorry, that is not a known emoticon"
+  end
 end
 
 def get_english_meaning
