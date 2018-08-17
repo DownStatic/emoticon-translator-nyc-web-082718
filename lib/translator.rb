@@ -10,7 +10,7 @@ def load_library(filepath)
   }
   emojis.each do |meaning,options|
   end
-  return libray
+  return library
 end
 
 def get_japanese_emoticon
