@@ -9,6 +9,8 @@ def load_library(filepath)
     "get_emoticon" =>{}
   }
   emojis.each do |meaning,options|
+    library["get_meaning"][options[1]] = meaning
+    library["get_emoticon"][options[0]] = options[1]
   end
   return library
 end
